@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme</title>
+    <title>AfriConnect Summit - Accueil</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+
     <!-- NAVBAR -->
     <header>
         <nav>
             <!-- Logo -->
-            <div class="logo">AfriConnect Summit 2026</div>
+             <img src="image/imagelogo.jpeg" alt="" width="100" height="80">
+            <div class="logo">AfriConnect Summit </div>
             
             <!-- Menu de navigation principal -->
             <ul>
@@ -22,38 +25,44 @@
 
             <!-- Boutons additionnels requis (Toggle Dark/Light Mode & Menu Hamburger pour mobile) -->
             <div class="nav-controls">
-                <button type="button" aria-label="Changer de mode (Sombre/Clair)">Mode Sombre/Clair</button>
-                <button type="button" aria-label="Ouvrir le menu mobile" class="menu-hamburger">Menu</button>
+                <button type="button" aria-label="Changer de mode (Sombre/Clair)">🌗</button>
+                <button type="button" aria-label="Ouvrir le menu mobile">Menu ☰</button>
             </div>
         </nav>
     </header>
 
-    <!-- HERO INTERNE -->
-    <header>
-        <div>
-            <h1>Programme de la Conférence</h1>
-            <!-- Fil d'Ariane -->
-            
 
-    <main>
-        
-        <!-- ONGLETS 3 JOURS -->
-        <section>
-            <h2>Planning de la conférence</h2>
+    <!-- ===== HERO INTERNE ===== -->
+    <header class="hero-interne">
+        <div class="hero-content">
+            <h1>Programme de l'Événement</h1>
+            <nav class="fil-ariane" aria-label="Fil d'Ariane">
+                
+                
             
-            <!-- Structure des onglets (Boutons de navigation) -->
-            <div role="tablist">
-                <button type="button" role="tab" aria-selected="true">Jour 1</button>
-                <button type="button" role="tab" aria-selected="false">Jour 2</button>
-                <button type="button" role="tab" aria-selected="false">Jour 3</button>
+        </div>
+    </header>
+
+    <!-- Enveloppe globale pour structurer la page -->
+    <div class="page-container">
+        
+        <!-- ===== SECTION ONGLETS ET TABLEAUX ===== -->
+        <section class="section-programme">
+            <h2 class="titre-section">Le Planning</h2>
+            
+            <!-- Les Onglets -->
+            <div class="onglets-container">
+                <button class="btn-onglet active" data-cible="jour1">Jour 1</button>
+                <button class="btn-onglet" data-cible="jour2">Jour 2</button>
+                <button class="btn-onglet" data-cible="jour3">Jour 3</button>
             </div>
 
-            <!-- Contenu des plannings (Tableaux) -->
-            <div>
-                <!-- Tableau Jour 1 -->
-                <div role="tabpanel">
-                    <h3>Planning - Jour 1</h3>
-                    <table border ="1">
+            <!-- Contenu des Onglets (Plannings) -->
+            <div class="contenus-programme">
+                
+                <!-- PLANNING JOUR 1 -->
+                <div id="jour1" class="planning-table active">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Heure</th>
@@ -64,86 +73,175 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>09:00 - 10:30</td>
-                                <td>Session d'ouverture et Introduction</td>
+                                <td class="heure">09:00 - 10:00</td>
+                                <td>Cérémonie d'ouverture & Discours</td>
+                                <td>Comité d'organisation</td>
+                                <td>Amphithéâtre A</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">10:00 - 11:30</td>
+                                <td>L'impact de l'IA générative en Afrique</td>
+                                <td>Ousseynou Faye</td>
+                                <td>Amphithéâtre A</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">11:30 - 13:00</td>
+                                <td>Financer sa startup en 2026</td>
+                                <td>Maty Diagne</td>
+                                <td>Salle de Conférence 1</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">14:00 - 15:30</td>
+                                <td>Atelier : Design Thinking appliqué</td>
                                 <td>Malang Massaly</td>
-                                <td>Amphi A</td>
+                                <td>Lab Design</td>
                             </tr>
                             <tr>
-                                <td>10:45 - 12:15</td>
-                                <td>Conférence Plénière 1</td>
-                                <td>Mouhamed Ndiaye</td>
-                                <td>Amphi A</td>
-                            </tr>
-                            <tr>
-                                <td>14:00 - 15:30</td>
-                                <td>Atelier Pratique A</td>
-                                <td>Pape Gueye</td>
-                                <td>Salle 102</td>
-                            </tr>
-                            <tr>
-                                <td>15:45 - 17:15</td>
-                                <td>Table Ronde : Innovations</td>
-                                <td>Laye Sene</td>
-                                <td>Salle de conférence</td>
-                            </tr>
-                            <tr>
-                                <td>17:30 - 19:00</td>
-                                <td>Keynote de clôture Jour 1</td>
-                                <td>Absa Fall</td>
-                                <td>Amphi B</td>
+                                <td class="heure">15:30 - 17:00</td>
+                                <td>Introduction au Machine Learning</td>
+                                <td>Rokhaya Toure</td>
+                                <td>Amphithéâtre B</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- Note : Les tableaux pour Jour 2 et Jour 3 suivront la même structure HTML exacte ci-dessus -->
+                <!-- PLANNING JOUR 2 -->
+                <div id="jour2" class="planning-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="heure">09:00 - 10:30</td>
+                                <td>Le futur des infrastructures Cloud</td>
+                                <td>Malang Massaly</td>
+                                <td>Amphithéâtre B</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">10:30 - 12:00</td>
+                                <td>Gouvernance des données et éthique</td>
+                                <td>Tidiane Ba</td>
+                                <td>Salle de Conférence 2</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">13:30 - 15:00</td>
+                                <td>Stratégies d'internationalisation</td>
+                                <td>Rokhaya Toure</td>
+                                <td>Salle de Conférence 1</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">15:00 - 16:30</td>
+                                <td>La révolution Web3 et DeFi</td>
+                                <td>Souleymane Massaly</td>
+                                <td>Amphithéâtre A</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">16:30 - 18:00</td>
+                                <td>Atelier : Prototypage rapide Figma</td>
+                                <td>Habibatou Cisse</td>
+                                <td>Lab Design</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PLANNING JOUR 3 -->
+                <div id="jour3" class="planning-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="heure">09:00 - 10:30</td>
+                                <td>Modèles prédictifs pour l'agriculture</td>
+                                <td>Habibatou Cisse</td>
+                                <td>Salle de Conférence 2</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">10:30 - 12:00</td>
+                                <td>Cybersécurité : Enjeux et solutions</td>
+                                <td>Souleymane Massaly</td>
+                                <td>Amphithéâtre B</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">13:30 - 15:00</td>
+                                <td>Fidélisation client et UX/UI</td>
+                                <td>Rokhaya Toure</td>
+                                <td>Lab Design</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">15:00 - 16:30</td>
+                                <td>Pitching devant des Venture Capitals</td>
+                                <td>Tidiane Ba</td>
+                                <td>Amphithéâtre A</td>
+                            </tr>
+                            <tr>
+                                <td class="heure">16:30 - 17:30</td>
+                                <td>Cérémonie de clôture et Awards</td>
+                                <td>Comité d'organisation</td>
+                                <td>Amphithéâtre A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </section>
 
-        <hr>
-
-        <!-- SECTION THÉMATIQUES -->
-        <section>
-            <h2>Thématiques de la conférence</h2>
+        <!-- ===== SECTION THÉMATIQUES ===== -->
+        <section class="section-thematiques">
+            <h2 class="titre-section">Thématiques de la Conférence</h2>
             
-            <!-- Conteneur pour les 4 thématiques -->
-            <div>
+            <div class="grille-thematiques">
                 <!-- Thématique 1 -->
-                <article>
-                    <img src="icone1.png" alt="Icône Thématique 1">
-                    <h3>Intelligence Artificielle</h3>
-                    <p>Découvrez les dernières avancées et l'impact de l'IA dans le développement moderne.</p>
-                </article>
+                <div class="carte-thematique">
+                    <div class="theme-icone">🤖</div>
+                    <h3>IA & Deep Tech</h3>
+                    <p>Explorez les dernières avancées en Intelligence Artificielle et algorithmes qui façonnent les industries africaines.</p>
+                </div>
 
                 <!-- Thématique 2 -->
-                <article>
-                    <img src="icone2.png" alt="Icône Thématique 2">
-                    <h3>Développement Web & Mobile</h3>
-                    <p>Sessions intensives sur les frameworks, l'architecture et les bonnes pratiques de code.</p>
-                </article>
+                <div class="carte-thematique">
+                    <div class="theme-icone">💼</div>
+                    <h3>Business & Scale-Up</h3>
+                    <p>Toutes les clés pour structurer son entreprise, lever des fonds et propulser vos services sur de nouveaux marchés.</p>
+                </div>
 
                 <!-- Thématique 3 -->
-                <article>
-                    <img src="icone3.png" alt="Icône Thématique 3">
-                    <h3>Cybersécurité</h3>
-                    <p>Enjeux, protocoles et stratégies pour sécuriser vos infrastructures numériques.</p>
-                </article>
+                <div class="carte-thematique">
+                    <div class="theme-icone">🎨</div>
+                    <h3>Design & Expérience</h3>
+                    <p>Placez l'utilisateur au centre du jeu grâce à des interfaces élégantes, intuitives et adaptées aux besoins locaux.</p>
+                </div>
 
                 <!-- Thématique 4 -->
-                <article>
-                    <img src="icone4.png" alt="Icône Thématique 4">
-                    <h3>Design d'Expérience (UX/UI)</h3>
-                    <p>Méthodologies centrées sur l'utilisateur pour concevoir des interfaces mémorables.</p>
-                </article>
+                <div class="carte-thematique">
+                    <div class="theme-icone">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Valorisez l'analyse de données massives pour prendre des décisions stratégiques prévisibles et éclairées.</p>
+                </div>
             </div>
         </section>
 
-    </main>
-       <!-- FOOTER -->
+    </div>
+    <!-- FOOTER -->
     <footer>
         <div class="footer-columns">
             <div class="footer-col">
+                <img src="image/imagelogo.jpeg" alt="" width="100" height="80">
                 <h4>AfriConnect Summit</h4>
                 <p>Le carrefour technologique pour propulser l'écosystème numérique africain vers de nouveaux horizons.</p>
             </div>
@@ -159,9 +257,9 @@
             <div class="footer-col">
                 <h4>Suivez-nous</h4>
                 <ul class="social-links">
-                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://twitter.com" target="_blank">X / Twitter</a></li>
-                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://twitter.com" target="_blank">>🐦 Twitter/X</a></li>
+                    <li><a href="https://YouTube.com" target="_blank">📺 YouTube</a></li>
                 </ul>
             </div>
         </div>
@@ -169,9 +267,14 @@
         <!-- Copyright & Bouton de retour en haut -->
         <div class="footer-bottom">
             <p>&copy; <span id="current-year">2026</span> AfriConnect Summit. Tous droits réservés.</p>
-            <a href="#top" class="back-to-top">Retour en haut ↑</a>
+            
+           <button type="button" aria-label="retour en haut"> <a href="#top" class="back-to-top">Retour en haut ↑</a></button>
         </div>
     </footer>
 
+</body>
+</html>
+
+    <script src="script.js"></script>
 </body>
 </html>

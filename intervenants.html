@@ -3,142 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intervenants</title>
+    <title>AfriConnect Summit - Accueil</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+
     <!-- NAVBAR -->
     <header>
         <nav>
             <!-- Logo -->
-            <div class="logo">AfriConnect Summit 2026</div>
+             <img src="image/imagelogo.jpeg" alt="" width="100" height="80">
+            <div class="logo">AfriConnect Summit </div>
             
             <!-- Menu de navigation principal -->
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="intervenants.html">Intervenant</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
                 <li><a href="programme.html">Programme</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
             <!-- Boutons additionnels requis (Toggle Dark/Light Mode & Menu Hamburger pour mobile) -->
             <div class="nav-controls">
-                <button type="button" aria-label="Changer de mode (Sombre/Clair)">Mode Sombre/Clair</button>
-                <button type="button" aria-label="Ouvrir le menu mobile" class="menu-hamburger">Menu</button>
+                <button type="button" aria-label="Changer de mode (Sombre/Clair)">🌗</button>
+                <button type="button" aria-label="Ouvrir le menu mobile">Menu ☰</button>
             </div>
         </nav>
     </header>
 
-    <!-- HERO INTERNE -->
-    <header>
-        <div>
+    <!-- ===== HERO INTERNE ===== -->
+    <header class="hero-interne">
+        <div class="hero-content">
             <h1>Nos Intervenants</h1>
-            <!-- Fil d'Ariane -->
             
-
-    <main>
-
-        <!-- FILTRAGE DYNAMIQUE -->
-        <section>
-            <h2>Filtrer les intervenants</h2>
-            <!-- Boutons de filtre par thématique -->
-            <div>
-                <button type="button">Tous</button>
-                <button type="button">IA &amp; Tech</button>
-                <button type="button">Business</button>
-                <button type="button">Design</button>
-                <button type="button">Data</button>
-            </div>
+        <!-- ===== FILTRAGE DYNAMIQUE ===== -->
+        <section class="filtres">
+            <button class="btn-filtre active" data-filtre="tous">Tous</button>
+            <button class="btn-filtre" data-filtre="ia-tech">IA & Tech</button>
+            <button class="btn-filtre" data-filtre="business">Business</button>
+            <button class="btn-filtre" data-filtre="design">Design</button>
+            <button class="btn-filtre" data-filtre="data">Data</button>
         </section>
 
-        <hr>
-
-        <!-- GRILLE D'INTERVENANTS -->
-        <section>
-            <h2>Liste des experts</h2>
+        <!-- ===== GRILLE D'INTERVENANTS (9 cartes) ===== -->
+        <section class="grille-intervenants">
             
-            <!-- Conteneur global (qui recevra la grille de 9 cartes) -->
-            <div>
+            <!-- Intervenant 1 -->
+            <article class="carte-intervenant" data-secteur="ia-tech">
+                <img src="image/imageadja.jpeg" alt="Photo de Aminata Diallo">
+                <div class="carte-body">
+                    <h3>Adja Ndiaye</h3>
+                    <p class="specialite">Experte en Intelligence Artificielle</p>
+                    <p class="pays">Maroc</p>
+                </div>
+            </article>
 
-                <!-- Carte Intervenant 1 -->
-                <article>
-                    <img src="image/imageadja.jpeg" alt="Photo de Intervenant 1">
-                    <h3>Adja Madjiguene Ndiaye</h3>
-                    <p><strong>Spécialité :</strong> Intelligence Artificielle</p>
-                    <p><strong>Pays :</strong> France</p>
-                </article>
-
-                <!-- Carte Intervenant 2 -->
-                <article>
-                    <img src="image/imagenogaye.jpeg" alt="Photo de Intervenant 2">
-                    <h3>Nogaye Cisse</h3>
-                    <p><strong>Spécialité :</strong> Business Strategy</p>
-                    <p><strong>Pays :</strong> Sénégal</p>
-                </article>
-
-                <!-- Carte Intervenant 3 -->
-                <article>
-                    <img src="image/imagedane.jpeg" alt="Photo de Intervenant 3">
-                    <h3>Dane Samba</h3>
-                    <p><strong>Spécialité :</strong> UI/UX Design</p>
-                    <p><strong>Pays :</strong> Canada</p>
-                </article>
-
-                <!-- Carte Intervenant 4 -->
-                <article>
-                    <img src="image/imagelahat.jpeg" alt="Photo de Intervenant 4">
-                    <h3>Lahat sarr</h3>
-                    <p><strong>Spécialité :</strong> Big Data &amp; Analytics</p>
-                    <p><strong>Pays :</strong> Maroc</p>
-                </article>
-
-                <!-- Carte Intervenant 5 -->
-                <article>
-                    <img src="image/imagelayesene.jpeg" alt="Photo de Intervenant 5">
-                    <h3>Souleymane Massaly</h3>
-                    <p><strong>Spécialité :</strong> Cybersécurité</p>
-                    <p><strong>Pays :</strong> États-Unis</p>
-                </article>
-
-                <!-- Carte Intervenant 6 -->
-                <article>
-                    <img src="image/imagemaawa.jpeg" alt="Photo de Intervenant 6">
-                    <h3>Maawa Ndiaye</h3>
-                    <p><strong>Spécialité :</strong> Blockchain &amp; Tech</p>
-                    <p><strong>Pays :</strong> Côte d'Ivoire</p>
-                </article>
-
-                <!-- Carte Intervenant 7 -->
-                <article>
-                    <img src="image/imageseynabou.jpeg" alt="Photo de Intervenant 7">
-                    <h3>Seynabou Massaly</h3>
-                    <p><strong>Spécialité :</strong> Product Management</p>
-                    <p><strong>Pays :</strong> France</p>
-                </article>
-
-                <!-- Carte Intervenant 8 -->
-                <article>
-                    <img src="image/imagealy.jpeg" alt="Photo de Intervenant 8">
+            <!-- Intervenant 2 -->
+            <article class="carte-intervenant" data-secteur="business">
+                <img src="image/imagealy.jpeg" alt="Photo de Kwame Mensah">
+                <div class="carte-body">
                     <h3>Aly Kane</h3>
-                    <p><strong>Spécialité :</strong> Data Science</p>
-                    <p><strong>Pays :</strong> Tunisie</p>
-                </article>
+                    <p class="specialite">Entrepreneur & Investisseur</p>
+                    <p class="pays">Ghana</p>
+                </div>
+            </article>
 
-                <!-- Carte Intervenant 9 -->
-                <article>
-                    <img src="image/imageawatall.jpeg" alt="Photo de Intervenant 9">
+            <!-- Intervenant 3 -->
+            <article class="carte-intervenant" data-secteur="design">
+                <img src="image/imageawa.jpeg" alt="Photo de Fatou Ndiaye">
+                <div class="carte-body">
                     <h3>Awa Tall</h3>
-                    <p><strong>Spécialité :</strong> Designer</p>
-                    <p><strong>Pays :</strong> Belgique</p>
-                </article>
+                    <p class="specialite">UX/UI Designer</p>
+                    <p class="pays">Sénégal</p>
+                </div>
+            </article>
 
-            </div>
+            <!-- Intervenant 4 -->
+            <article class="carte-intervenant" data-secteur="data">
+                <img src="image/imagedane.jpeg" alt="Photo de Ibrahim Cissé">
+                <div class="carte-body">
+                    <h3>Dane Samba</h3>
+                    <p class="specialite">Data Scientist</p>
+                    <p class="pays">Mali</p>
+                </div>
+            </article>
+
+            <!-- Intervenant 5 -->
+            <article class="carte-intervenant" data-secteur="ia-tech">
+                <img src="image/imagemaawa.jpeg" alt="Photo de Sarah Koné">
+                <div class="carte-body">
+                    <h3>Maawa Ndiaye</h3>
+                    <p class="specialite">Développeuse IA</p>
+                    <p class="pays">Côte d'Ivoire</p>
+                </div>
+            </article>
+
+            <!-- Intervenant 6 -->
+            <article class="carte-intervenant" data-secteur="business">
+                <img src="image/imagelahat.jpeg" alt="Photo de David Osei">
+                <div class="carte-body">
+                    <h3>Lahat Sarr</h3>
+                    <p class="specialite">Consultant Stratégie</p>
+                    <p class="pays">Nigeria</p>
+                </div>
+            </article>
+
+            <!-- Intervenant 7 -->
+            <article class="carte-intervenant" data-secteur="design">
+                <img src="image/imageseynabou.jpeg" alt="Photo de Awa Sarr">
+                <div class="carte-body">
+                    <h3>Seynabou Massaly</h3>
+                    <p class="specialite">Product Designer</p>
+                    <p class="pays">Cap Vert</p>
+                </div>
+            </article>
+
+            <!-- Intervenant 8 -->
+            <article class="carte-intervenant" data-secteur="data">
+                <img src="image/imagelayesene.jpeg" alt="Photo de Moussa Traoré">
+                <div class="carte-body">
+                    <h3>Laye Sene</h3>
+                    <p class="specialite">Analyste Data</p>
+                    <p class="pays">Guinee Bissau</p>
+                </div>
+            </article>
+
+            <!-- Intervenant 9 -->
+            <article class="carte-intervenant" data-secteur="ia-tech">
+                <img src="image/imagenogaye.jpeg" alt="Photo de Chidi Okafor">
+                <div class="carte-body">
+                    <h3>Nogaye Cisse</h3>
+                    <p class="specialite">Ingénieur Machine Learning</p>
+                    <p class="pays">Cameroun</p>
+                </div>
+            </article>
+
         </section>
-
     </main>
-             <!-- FOOTER -->
+    
+    <!-- FOOTER -->
     <footer>
         <div class="footer-columns">
             <div class="footer-col">
+                <img src="image/imagelogo.jpeg" alt="" width="100" height="80">
                 <h4>AfriConnect Summit</h4>
                 <p>Le carrefour technologique pour propulser l'écosystème numérique africain vers de nouveaux horizons.</p>
             </div>
@@ -154,19 +161,25 @@
             <div class="footer-col">
                 <h4>Suivez-nous</h4>
                 <ul class="social-links">
-                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://twitter.com" target="_blank">X / Twitter</a></li>
-                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://twitter.com" target="_blank">>🐦 Twitter/X</a></li>
+                    <li><a href="https://YouTube.com" target="_blank">📺 YouTube</a></li>
                 </ul>
             </div>
         </div>
-
+          
+    
         <!-- Copyright & Bouton de retour en haut -->
         <div class="footer-bottom">
             <p>&copy; <span id="current-year">2026</span> AfriConnect Summit. Tous droits réservés.</p>
-            <a href="#top" class="back-to-top">Retour en haut ↑</a>
+            
+           <button type="button" aria-label="retour en haut"> <a href="#top" class="back-to-top">Retour en haut ↑</a></button>
         </div>
     </footer>
 
+</body>
+</html>
+
+    <script src="script.js"></script>
 </body>
 </html>

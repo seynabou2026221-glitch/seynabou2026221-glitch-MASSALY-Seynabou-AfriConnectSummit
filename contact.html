@@ -1,16 +1,19 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription &amp; Contact</title>
+    <title>AfriConnect Summit - Accueil</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+
     <!-- NAVBAR -->
     <header>
         <nav>
             <!-- Logo -->
-            <div class="logo">AfriConnect Summit 2026</div>
+             <img src="image/imagelogo.jpeg" alt="" width="100" height="80">
+            <div class="logo">AfriConnect Summit </div>
             
             <!-- Menu de navigation principal -->
             <ul>
@@ -22,185 +25,186 @@
 
             <!-- Boutons additionnels requis (Toggle Dark/Light Mode & Menu Hamburger pour mobile) -->
             <div class="nav-controls">
-                <button type="button" aria-label="Changer de mode (Sombre/Clair)">Mode Sombre/Clair</button>
-                <button type="button" aria-label="Ouvrir le menu mobile" class="menu-hamburger">Menu</button>
+                <button type="button" aria-label="Changer de mode (Sombre/Clair)">🌗</button>
+                <button type="button" aria-label="Ouvrir le menu mobile">Menu ☰</button>
             </div>
         </nav>
     </header>
 
-    <!-- HERO INTERNE -->
-    <header>
-        <div>
-            <h1>Inscription &amp; Contact</h1>
-            <!-- Fil d'Ariane -->
-            
-
-    <main>
-
-        <!-- FORMULAIRE D'INSCRIPTION & INFORMATIONS -->
-        <section>
-            <h2>Formulaire d'Inscription</h2>
-            
-            <!-- Conteneur principal (Destiné à recevoir les deux colonnes Flexbox) -->
-            <div>
+    <!-- ===== HERO INTERNE ===== -->
+    <header class="hero-interne">
+        <div class="hero-content">
+            <h1>Contact & Inscription</h1>
+            <nav class="fil-ariane" aria-label="Fil d'Ariane">
                 
-                <!-- Colonne Gauche : Formulaire -->
-                <div>
-                    <form action="#" method="POST">
+        </div>
+    </header>
+
+    <div class="page-container">
+        
+        <!-- ===== FORMULAIRE EN 2 COLONNES FLEXBOX ===== -->
+        <section class="section-contact">
+            <div class="contact-flex-container">
+                
+                <!-- Colonne de Gauche : Formulaire -->
+                <div class="col-formulaire">
+                    <h2>Formulaire d'Inscription</h2>
+                    <div id="success-message" class="hidden">Inscription réussie avec succès ! À bientôt au sommet.</div>
+                    
+                    <form id="inscription-form" novalidate>
                         
-                        <!-- Nom complet -->
-                        <div>
-                            <label for="nom">Nom complet : </label>
-                            <input type="text" id="nom" name="nom" required>
+                        <!-- Nom Complet -->
+                        <div class="form-group">
+                            <label for="nom">Nom Complet *</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom">
+                            <span class="error-text" id="error-nom"></span>
                         </div>
 
                         <!-- Email -->
-                        <div>
-                            <label for="email">Adresse Email :</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="form-group">
+                            <label for="email">Adresse Email *</label>
+                            <input type="email" id="email" name="email" placeholder="exemple@domaine.com">
+                            <span class="error-text" id="error-email"></span>
                         </div>
 
                         <!-- Téléphone -->
-                        <div>
-                            <label for="telephone">Téléphone (minimum 8 chiffres) :</label>
-                            <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{8,}">
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="Ex: +221 77 123 45 67">
+                            <span class="error-text" id="error-telephone"></span>
                         </div>
 
                         <!-- Type de participation -->
-                        <div>
-                            <label for="participation">Type de participation :</label>
-                            <select id="participation" name="participation" required>
+                        <div class="form-group">
+                            <label for="participation">Type de Participation *</label>
+                            <select id="participation" name="participation">
                                 <option value="">-- Choisir une option --</option>
-                                <option value="presentiel">Présentiel</option>
-                                <option value="distanciel">En ligne / Distanciel</option>
-                                <option value="intervenant">Intervenant / Speaker</option>
-                                <option value="partenaire">Partenaire / Sponsor</option>
+                                <option value="visiteur">Simple Visiteur</option>
+                                <option value="etudiant">Étudiant / Chercheur</option>
+                                <option value="exposant">Exposant / Stand</option>
+                                <option value="intervenant">Intervenant potentiel</option>
                             </select>
+                            <span class="error-text" id="error-participation"></span>
                         </div>
 
-                        <!-- Pays africain (Minimum 10 pays dans la liste) -->
-                        <div>
-                            <label for="pays">Pays africains :</label>
-                            <select id="pays" name="pays" required>
+                        <!-- Pays (10 pays africains requis) -->
+                        <div class="form-group">
+                            <label for="pays">Pays de résidence *</label>
+                            <select id="pays" name="pays">
                                 <option value="">-- Choisir un pays --</option>
                                 <option value="senegal">Sénégal</option>
+                                <option value="mali">Mali</option>
                                 <option value="cote-divoire">Côte d'Ivoire</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="cameroun">Cameroun</option>
                                 <option value="maroc">Maroc</option>
                                 <option value="tunisie">Tunisie</option>
-                                <option value="cameroun">Cameroun</option>
-                                <option value="mali">Mali</option>
-                                <option value="algerie">Algérie</option>
-                                <option value="burkina-faso">Burkina Faso</option>
-                                <option value="benin">Bénin</option>
-                                <option value="togo">Togo</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="rwanda">Rwanda</option>
                             </select>
+                            <span class="error-text" id="error-pays"></span>
                         </div>
 
-                        <!-- Message / Motivation -->
-                        <div>
-                            <label for="message">Message / Motivation (minimum 20 caractères) :</label>
-                            <textarea id="message" name="message" rows="5" required minlength="20"></textarea>
+                        <!-- Message de motivation -->
+                        <div class="form-group">
+                            <label for="message">Message ou Motivation * (20 caractères min.)</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Décrivez vos motivations pour participer au sommet..."></textarea>
+                            <span class="error-text" id="error-message"></span>
                         </div>
 
-                        <!-- Bouton d'envoi -->
-                        <div>
-                            <button type="submit">Envoyer l'inscription</button>
-                        </div>
-
+                        <button type="submit" class="btn-submit">S'inscrire au Sommet</button>
                     </form>
                 </div>
 
-                <!-- Colonne Droite : Informations de contact -->
-                <div>
-                    <h3>Informations de contact</h3>
-                    <p><strong>Adresse :</strong> Avenue Cheikh Anta Diop, Dakar, Sénégal</p>
-                    <p><strong>Téléphone :</strong> +221 33 800 00 00</p>
-                    <p><strong>Email :</strong> contact@africaconnectsummit.com</p>
-                    <p><strong>Horaires :</strong> Lun - Ven : 8h00 - 18h00</p>
+                <!-- Colonne de Droite : Infos Pratiques -->
+                <div class="col-infos">
+                    <h2>Informations Pratiques</h2>
+                    <div class="info-block">
+                        <h3>📍 Adresse du Sommet</h3>
+                        <p>Centre International de Conférences Abdou Diouf (CICAD), Diamniadio, Dakar, Sénégal.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>✉️ Contact direct</h3>
+                        <p>E-mail : contact@africonnectsummit.com<br>Téléphone : +221 33 800 00 00</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>🗓️ Dates</h3>
+                        <p>Du 15 au 17 Octobre 2026</p>
+                    </div>
                 </div>
 
             </div>
         </section>
 
-        <hr>
-
-        <!-- FAQ EN ACCORDÉON CSS PUR -->
-        <!-- Structure préparée avec des balises <input type="checkbox"> pour permettre l'ouverture/fermeture en CSS pur via l'état :checked -->
-        <section>
-            <h2>Questions Fréquentes (FAQ)</h2>
-
-            <div>
+        <!-- ===== FAQ EN ACCORDÉON CSS PUR (0% JAVASCRIPT) ===== -->
+        <section class="section-faq">
+            <h2 class="titre-section">Questions Fréquentes (FAQ)</h2>
+            <div class="faq-container">
+                
                 <!-- Question 1 -->
-                <div>
-                    <input type="checkbox" id="faq-1">
-                    <label for="faq-1"><strong>+ Comment obtenir mon badge après l'inscription ?</strong></label>
-                    <div>
-                        <p>Une fois votre inscription validée, un QR code vous sera envoyé par email. Vous pourrez le présenter à l'accueil pour retirer votre badge physique.</p>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-1" class="faq-toggle">
+                    <label for="faq-1" class="faq-header">Comment puis-je récupérer mon badge d'accès ?</label>
+                    <div class="faq-content">
+                        <p>Vous pourrez récupérer votre badge directement à l'accueil du CICAD dès le premier jour de l'événement sur présentation de votre email de confirmation d'inscription.</p>
                     </div>
                 </div>
 
                 <!-- Question 2 -->
-                <div>
-                    <input type="checkbox" id="faq-2">
-                    <label for="faq-2"><strong>+ Les ateliers pratiques sont-ils payants ?</strong></label>
-                    <div>
-                        <p>Non, tous les ateliers sont inclus dans le pass d'accès général, mais l'inscription préalable est obligatoire en raison des places limitées.</p>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-2" class="faq-toggle">
+                    <label for="faq-2" class="faq-header">L'inscription au AfriConnect Summit est-elle payante ?</label>
+                    <div class="faq-content">
+                        <p>L'accès général est gratuit pour les étudiants et chercheurs après inscription préalable. Des pass VIP payants sont disponibles pour accéder aux dîners de networking.</p>
                     </div>
                 </div>
 
                 <!-- Question 3 -->
-                <div>
-                    <input type="checkbox" id="faq-3">
-                    <label for="faq-3"><strong>+ Un certificat de participation est-il délivré ?</strong></label>
-                    <div>
-                        <p>Oui, un certificat de participation nominatif sera envoyé au format numérique à tous les participants ayant assisté aux trois jours de conférence.</p>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-3" class="faq-toggle">
+                    <label for="faq-3" class="faq-header">Y a-t-il des navettes pour se rendre à Diamniadio ?</label>
+                    <div class="faq-content">
+                        <p>Oui, des navettes gratuites seront affrétées chaque matin depuis le centre de Dakar (Place de l'Indépendance) vers le CICAD et feront le trajet inverse en fin de journée.</p>
                     </div>
                 </div>
 
                 <!-- Question 4 -->
-                <div>
-                    <input type="checkbox" id="faq-4">
-                    <label for="faq-4"><strong>+ Est-il possible de suivre l'événement à distance ?</strong></label>
-                    <div>
-                        <p>Tout à fait, vous pouvez sélectionner l'option "Distanciel" dans le formulaire pour recevoir les liens de diffusion en direct des plénières.</p>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-4" class="faq-toggle">
+                    <label for="faq-4" class="faq-header">Comment soumettre une proposition d'intervention ?</label>
+                    <div class="faq-content">
+                        <p>Sélectionnez simplement "Intervenant potentiel" dans le formulaire ci-dessus et détaillez le sujet de votre conférence dans le champ motivation.</p>
                     </div>
                 </div>
 
                 <!-- Question 5 -->
-                <div>
-                    <input type="checkbox" id="faq-5">
-                    <label for="faq-5"><strong>+ Comment devenir sponsor ou partenaire de l'événement ?</strong></label>
-                    <div>
-                        <p>Vous pouvez nous contacter directement via l'option "Partenaire" du formulaire ou nous envoyer un email dédié afin de recevoir notre dossier de partenariat.</p>
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-5" class="faq-toggle">
+                    <label for="faq-5" class="faq-header">Puis-je annuler ou modifier ma participation ?</label>
+                    <div class="faq-content">
+                        <p>Absolument. Il vous suffit d'envoyer un e-mail à l'adresse indiquée dans la rubrique contact avec votre numéro de dossier pour effectuer toute modification.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <hr>
-
-        <!-- CARTE GOOGLE MAPS -->
-        <section>
-            <h2>Localisation de l'événement</h2>
-            <!-- Iframe pointant vers une ville africaine (Exemple : Dakar, Sénégal) -->
-            <div>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2223846665793!2d-17.467362!3d14.693425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1128a301d0dbb%3A0x673cd757917711d4!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2s!4v1700000000000!5m2!1sfr!2s" 
-                    width="600" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+        <!-- ===== CARTE GOOGLE MAPS ===== -->
+        <section class="section-map">
+            <h2 class="titre-section">Nous Situer</h2>
+            <div class="map-container">
+                <!-- Iframe pointant vers Dakar, Sénégal -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123490.5401928045!2d-17.4913214539158!3d14.711181813133694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec171542fbc9447%3A0xe531bdfd92f72a6b!2sCICAD!5e0!3m2!1sfr!2ssn!4v1700000000000!5m2!1sfr!2ssn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-    </main>
-        <!-- FOOTER -->
+    </div>
+    <!-- FOOTER -->
     <footer>
         <div class="footer-columns">
             <div class="footer-col">
+                <img src="image/imagelogo.jpeg" alt="" width="100" height="80">
                 <h4>AfriConnect Summit</h4>
                 <p>Le carrefour technologique pour propulser l'écosystème numérique africain vers de nouveaux horizons.</p>
             </div>
@@ -216,9 +220,9 @@
             <div class="footer-col">
                 <h4>Suivez-nous</h4>
                 <ul class="social-links">
-                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://twitter.com" target="_blank">X / Twitter</a></li>
-                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://twitter.com" target="_blank">>🐦 Twitter/X</a></li>
+                    <li><a href="https://YouTube.com" target="_blank">📺 YouTube</a></li>
                 </ul>
             </div>
         </div>
@@ -226,9 +230,14 @@
         <!-- Copyright & Bouton de retour en haut -->
         <div class="footer-bottom">
             <p>&copy; <span id="current-year">2026</span> AfriConnect Summit. Tous droits réservés.</p>
-            <a href="#top" class="back-to-top">Retour en haut ↑</a>
+            
+           <button type="button" aria-label="retour en haut"> <a href="#top" class="back-to-top">Retour en haut ↑</a></button>
         </div>
     </footer>
 
+</body>
+</html>
+
+    <script src="script.js"></script>
 </body>
 </html>
