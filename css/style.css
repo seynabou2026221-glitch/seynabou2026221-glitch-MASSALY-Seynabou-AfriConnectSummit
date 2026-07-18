@@ -754,7 +754,6 @@ body {
     border-top: 1px solid #f0f0f0;
     margin-top: 10px;
 }
-
 /* ==========================================
    5. RESPONSIVE DESIGN (MOBILE)
    ========================================== */
@@ -777,6 +776,7 @@ body {
         gap: 20px;
     }
 }
+
 /* ==========================================
    1. VARIABLES & RESET
    ========================================== */
@@ -1669,4 +1669,140 @@ tbody tr:hover {
     gap: 1rem;
     padding: 1rem 1.5rem;
   }
+}
+/* ==========================================
+   VARIABLES DE COULEURS (À mettre en haut du CSS)
+   ========================================== */
+:root {
+    /* Mode Clair (Par défaut) */
+    --bg-primary: #ffffff;          /* Fond de page principal */
+    --bg-secondary: #f8f9fa;        /* Fond des sections alternées (Sponsors, cartes) */
+    --text-main: #212529;           /* Couleur du texte principal */
+    --text-muted: #6c757d;          /* Couleur des sous-titres et labels */
+    --card-bg: #ffffff;             /* Fond des cartes (Intervenants, arguments) */
+    --card-border: rgba(0,0,0,0.1);  /* Bordures subtiles */
+    --nav-bg: #ffffff;              /* Fond de la barre de navigation */
+}
+
+body.dark-mode {
+    /* Mode Sombre (Activé par le JavaScript) */
+    --bg-primary: #121212;          /* Fond sombre principal */
+    --bg-secondary: #1e1e1e;        /* Fond de section sombre */
+    --text-main: #f8f9fa;           /* Texte blanc/clair */
+    --text-muted: #a0a0a0;          /* Sous-titres plus discrets */
+    --card-bg: #2a2a2a;             /* Fond de carte sombre */
+    --card-border: rgba(255,255,255,0.1);
+    --nav-bg: #1a1a1a;
+}
+
+/* ==========================================
+   APPLICATION DES VARIABLES SUR VOS ÉLÉMENTS
+   ========================================== */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+header {
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--card-border);
+}
+
+header nav ul li a {
+    color: var(--text-main);
+}
+
+/* Sections alternées (ex: Pourquoi participer ou Sponsors) */
+#pourquoi-participer, #sponsors, footer {
+    background-color: var(--bg-secondary);
+}
+
+/* Application sur toutes vos structures de cartes HTML visibles sur vos images */
+.stat-card, .argument-card, .intervenant-card, .sponsor-level {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-main);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Textes secondaires (par exemple la classe .subtitle ou les paragraphes de cartes) */
+.subtitle, .stat-label, .argument-card p, .intervenant-card .pays, footer p {
+    color: var(--text-muted);
+}
+
+/* Liens des pieds de page et redirection */
+footer a, .view-more a {
+    color: var(--text-main);
+}
+/* --- SECTION FILTRES --- */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 2px solid transparent;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #007bff; /* À adapter selon la couleur de votre charte AfriConnect */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(244, 245, 247, 0.3);
+}
+
+/* --- ANIMATION DES CARTES INTERVENANTS --- */
+.intervenants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.intervenant-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    
+    /* Propriétés essentielles pour l'animation de filtrage */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.intervenant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Style rapide des images pour un rendu propre */
+.intervenant-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f4f4f4;
 }
