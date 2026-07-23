@@ -1806,3 +1806,212 @@ footer a, .view-more a {
     margin-bottom: 15px;
     border: 3px solid #f4f4f4;
 }
+/* --- SECTION FILTRES (Image 11) --- */
+.section-filtres {
+    display: block; /* Évite les comportements imprévus de Weasyprint/Flex */
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-filtre {
+    background-color: #f5f7fa;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-filtre:hover {
+    background-color: #edf2f7;
+    color: #1a202c;
+    transform: translateY(-1px);
+}
+
+.btn-filtre.active {
+    background-color: #007bff; /* Couleur principale AfriConnect */
+    color: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+}
+
+/* --- GRILLE & CARTES D'INTERVENANTS --- */
+.grille-intervenants {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.carte-intervenant {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 24px;
+    
+    /* Propriétés requises pour des transitions d'affichage fluides */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-intervenant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- DESIGN INTERNE DE LA CARTE --- */
+.carte-intervenant img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 3px solid #edf2f7;
+}
+
+.carte-body h3 {
+    font-size: 18px;
+    color: #1a202c;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.carte-body .specialite {
+    font-size: 14px;
+    color: #007bff;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.carte-body .pays {
+    font-size: 13px;
+    color: #718096;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+/* --- SECTION ONGLETS PLANNING --- */
+.onglets-container {
+    display: block;
+    text-align: center;
+    margin: 40px 0 30px 0;
+}
+
+.btn-onglet {
+    background-color: #f8fafc;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    padding: 12px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 8px;
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-onglet:hover {
+    background-color: #edf2f7;
+    color: #1e293b;
+}
+
+.btn-onglet.active {
+    background-color: #007bff; /* Couleur principale AfriConnect */
+    color: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+}
+
+/* --- STRUCTURE ET STYLE DES TABLEAUX --- */
+.contenus-programme {
+    margin-top: 20px;
+    min-height: 400px; /* Évite les sauts de page brutaux lors du changement d'onglet */
+}
+
+.planning-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    
+    /* Préparation des transitions d'affichage */
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Force l'affichage initial pour le tableau actif par défaut (Jour 1) */
+.planning-table.planning-table.active {
+    display: table;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles des En-têtes (thead) */
+.planning-table thead {
+    background-color: #0f172a; /* Bleu nuit très professionnel */
+    color: #ffffff;
+}
+
+.planning-table th {
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+/* Styles des Lignes et Cellules (tbody) */
+.planning-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.planning-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.planning-table tbody tr:hover {
+    background-color: #f8fafc; /* Effet de survol sobre */
+}
+
+/* Alignement et style spécifique de la colonne Heure */
+.planning-table td.heure {
+    font-weight: 700;
+    color: #007bff;
+    white-space: nowrap;
+    width: 15%;
+}
+
+/* Amélioration visuelle des titres de Sessions */
+.planning-table td:nth-child(2) {
+    font-weight: 600;
+    color: #1e293b;
+    width: 45%;
+}
+
+/* Colonnes intervenants et salles */
+.planning-table td:nth-child(3) { width: 20%; }
+.planning-table td:nth-child(4) { 
+    width: 20%;
+    color: #64748b;
+    font-style: italic;
+}
